@@ -18,8 +18,5 @@ body {
 
 .gridbox {
     border: 1px solid black;
-}
-
-.gridbox:hover {
-    background-color: black;
+    background-color: white;
 }
