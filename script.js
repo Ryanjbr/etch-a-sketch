@@ -1,18 +1,24 @@
-const container = document.querySelector('#container')
-const slider = document.querySelector("#range")
-let sliderValue = 50;
+const container = document.querySelector('#container');
+const slider = document.querySelector("#range");
+const size = document.querySelector("#gridSize");
+let sliderValue = 10;
 
-slider.oninput = function () {
-    console.log(slider.value)
-    container.style.gridTemplateRows = `repeat(${slider.value}, 1fr)`
-    container.style.gridTemplateColumns = `repeat(${slider.value}, 1fr)`
+createGrid(10); 
+
+slider.oninput = function() {
+    size.textContent = slider.value;
+    createGrid(slider.value);
+};
+
+function createGrid(value) {
     while(container.firstChild) {
-        container.removeChild(container.firstChild)
-    }
-    for (let i = 0; i < slider.value*slider.value; i++) {
+        container.removeChild(container.firstChild);
+    };
+    container.style.gridTemplateRows = `repeat(${value}, 1fr)`;
+    container.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
+    for (let i = 0; i < value*value; i++) {
         const div = document.createElement('div');
         div.setAttribute("class", "gridbox");
-        container.appendChild(div)
-    }
+        container.appendChild(div);
+    };
 }
-
