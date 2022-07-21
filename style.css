@@ -1,9 +1,11 @@
 body {
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-image: url('images/sketch2.jpg');
+    background-size: cover;
 }
 
 #container {
@@ -14,6 +16,28 @@ body {
     display: grid;
     grid-gap: 0px;
     margin-bottom: 10vh;
+}
+
+#inputContainer {
+    background-color: white;
+    height: 10vh;
+    width: 25vh;
+    margin-right: 10px;
+}
+#reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 10vh;
+    width: 25vh;
+    margin-left: 10px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .gridbox {
