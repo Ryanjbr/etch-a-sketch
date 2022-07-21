@@ -1,21 +1,23 @@
 body {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 #container {
-    width: 200px;
-    display: flex;
-    flex-wrap: wrap;
+    width: 75vh;
+    max-width: 75vh;
+    max-height: 75vh;
+    height: 75vh;
+    display: grid;
+    grid-gap: 0px;
     margin-bottom: 10vh;
 }
 
 .gridbox {
     border: 1px solid black;
-    width: 24%;
-    height: 50px;
 }
 
 .gridbox:hover {
